@@ -1,3 +1,5 @@
+var db = require("./models/index.js");
+
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
@@ -20,12 +22,16 @@ var exphbs = require('express-handlebars');
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// app.listen(PORT, function() {
+//     console.log("app listening on PORT " + PORT);
+// });
 
+require("./routes/ingredients-api-routes.js")(app);
 
-app.use('/', routes);
+require("./routes/taco-api-routes.js")(app);
 
-=======
-
-app.listen(PORT, function() {
-    console.log("app listening on PORT " + PORT);
+db.sequelize.sync().then(function() {
+	app.listen(PORT, function() {
+		console.log("listening on PORT " + PORT);
+	});
 });

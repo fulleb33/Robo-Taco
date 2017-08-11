@@ -2,14 +2,14 @@ var sequelize = require("../config/connection.js");
 
 var RoboTaco = sequelize.define("robo-taco", {
   taco_name: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: true
   }, 
   ingredients: {
-    type: Sequelize.STRING
+    type: DataTypes.STRING
   },
   price: {
-    type: Sequelize.FLOAT
+    type: DataTypes.FLOAT
   }
 });
 

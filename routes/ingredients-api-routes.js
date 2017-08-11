@@ -2,14 +2,18 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-	app.get("/api/ingredients", function(req, res) {
-		db.ingredients.findAll({}).then(function(results) {
+	app.get("/", function(req, res) {
+		db.Ingredients.findAll({}).then(function(results) {
+			var hbsObject = {
+				ingredients: results
+			}
 			res.json(results);
+			res.render("index", hbsObject);
 		});
 	});
 
 	app.get("/api/ingredients/:id", function(req, res) {
-		db.ingredients.findOne({
+		db.Ingredients.findOne({
 			where: {
 				id: req.params.id
 			}
@@ -19,7 +23,7 @@ module.exports = function(app) {
 	});
 
 	app.post("/api/ingredients", function(req, res) {
-		db.ingredients.create(
+		db.Ingredients.create(
 		  {
 			item_name: req.body.item_name,
 			type: req.body.type,
@@ -31,7 +35,7 @@ module.exports = function(app) {
 	});
 
 	app.delete("/api/ingredients/:id", function(req, res) {
-		db.ingredients.destroy({
+		db.Ingredients.destroy({
 			where: {
 				id: req.params.id
 			}
@@ -41,7 +45,7 @@ module.exports = function(app) {
 	});
 
 	app.put("/api/ingredients", function(req, res) {
-		db.ingredients.update(
+		db.Ingredients.update(
 		  {
 		  	item_name: req.body.name,
 		  	type: req.body.type,
