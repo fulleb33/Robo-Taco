@@ -1,5 +1,5 @@
 var db = require("./models/index.js");
-
+var sequelize = require("sequelize");
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
