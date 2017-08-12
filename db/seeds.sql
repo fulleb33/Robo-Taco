@@ -1,36 +1,37 @@
--- Insert values
+-- Insert 
 INSERT INTO ingredients (item_name, type, price)
-	VALUES ('corn', 'tortilla', 0.50)
-	VALUES ('flour', 'tortilla', 0.50)
-	VALUES ('white rice', 'grain', 1.00)
-	VALUES ('brown rice', 'grain', 1.00)
-	VALUES ('pinto beans', 'legume', 1.00)
-	VALUES ('black beans', 'legume', 1.00)
-	VALUES ('chicken', 'protein', 1.50)
-	VALUES ('steak', 'protein', 2.00)
-	VALUES ('carnitas', 'protein', 1.50)
-	VALUES ('shrimp', 'protein', 2.00)
-	VALUES ('tofu', 'protein', 0.75)
-	VALUES ('grilled-seasonal veggies', 'vegtables', 0.50)
-	VALUES ('lettuce', 'vegtables', 0.10)
-	VALUES ('tomato', 'vegtables', 0.25)
-	VALUES ('corn', 'vegtables', 0.25)
-	VALUES ('jalapeno', 'vegtables', 0.25)
-	VALUES ('avocado', 'vegtables', 1.50)
-	VALUES ('signature coleslaw', 'vegtables', 1.50)
-	VALUES ('onion', 'vegtables', 0.25)
-	VALUES ('mushroom', 'vegtables', 1.00)
-	VALUES ('cheddar', 'dairy', 0.75)
-	VALUES ('cojita', 'dairy', 0.75)
-	VALUES ('pepperjack', 'dairy', 0.75)
-	VALUES ('sourcream', 'dairy', 0.75)
-	VALUES ('tomatillo', 'salsa', 0.25)
-	VALUES ('diablo', 'salsa', 0.25)
-	VALUES ('rojo', 'salsa', 0.25)
-	VALUES ('homemade guacamole', 'sides', 2.50)
-	VALUES ('homemade queso', 'sides', 2.50)
-	VALUES ('chips', 'sides', 1.00)
-	VALUES ('iced tea', 'beverage', 2.00)
-	VALUES ('soda', 'beverage', 2.00)
-	VALUES ('margarita', 'beverage', 6.50)
-	VALUES ('beer', 'beverage', 5.50);
+	 VALUES
+	 ('corn', 'tortilla', 0.50),
+	 ('flour', 'tortilla', 0.50),
+	 ('white rice', 'grain', 1.00),
+	 ('brown rice', 'grain', 1.00),
+	 ('pinto beans', 'legume', 1.00),
+	 ('black beans', 'legume', 1.00),
+	 ('chicken', 'protein', 1.50),
+	 ('steak', 'protein', 2.00),
+	 ('carnitas', 'protein', 1.50),
+	 ('shrimp', 'protein', 2.00),
+	 ('tofu', 'protein', 0.75),
+	 ('grilled-seasonal veggies', 'vegtables', 0.50),
+	 ('lettuce', 'vegtables', 0.10),
+	 ('tomato', 'vegtables', 0.25),
+	 ('corn', 'vegtables', 0.25),
+	 ('jalapeno', 'vegtables', 0.25),
+	 ('avocado', 'vegtables', 1.50),
+	 ('signature coleslaw', 'vegtables', 1.50),
+	 ('onion', 'vegtables', 0.25),
+	 ('mushroom', 'vegtables', 1.00),
+	 ('cheddar', 'dairy', 0.75),
+	 ('cojita', 'dairy', 0.75),
+	 ('pepperjack', 'dairy', 0.75),
+	 ('sourcream', 'dairy', 0.75),
+	 ('tomatillo', 'salsa', 0.25),
+	 ('diablo', 'salsa', 0.25),
+	 ('rojo', 'salsa', 0.25),
+	 ('homemade guacamole', 'sides', 2.50),
+	 ('homemade queso', 'sides', 2.50),
+	 ('chips', 'sides', 1.00),
+	 ('iced tea', 'beverage', 2.00),
+	 ('soda', 'beverage', 2.00),
+	 ('margarita', 'beverage', 6.50),
+	 ('beer', 'beverage', 5.50);
