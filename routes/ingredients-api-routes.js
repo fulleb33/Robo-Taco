@@ -3,11 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
 
 	app.get("/", function(req, res) {
-		db.Ingredients.findAll({}).then(function(results) {
+		db.ingredients.findAll({}).then(function(results) {
 			var hbsObject = {
 				ingredients: results
 			}
-			res.json(results);
 			res.render("index", hbsObject);
 		});
 	});
