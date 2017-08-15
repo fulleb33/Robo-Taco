@@ -21,14 +21,30 @@
 #title{
 	height: 100%;
 }
+
 #homeTitle{
-	font-size: 70px;
+    font-family: 'Impact';
+    letter-spacing: 10px;
+	font-size: 150px;
 	color: white;
 	text-align: center;
+    padding: 15% 2%;
+    opacity: .8;
 }
+
+h3 {
+    font-family: 'Impact';
+    letter-spacing: 7px;
+    font-size: 60px;
+    opacity: .8;
+    color: white;
+    text-align: center;
+    padding: 25px 20px 25px 20px;
+}
+
 #communityTitle{
 	background-image: url(../images/farm.jpg);
-	    color:white;
+	color:white;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -36,5 +52,43 @@
     background-size: cover;
 	text-align: center;
 	height: 500px;
-	padding-top: 20px;
+	padding-top: 1px;
+}
+
+#promoTitle{
+    background-image: url(../images/tacopeople.jpg);
+        color:white;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 500px;
+    padding-top: 20px;
+}
+
+.a {
+    padding: 10px;
+    margin: 10% 20%;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'arial';
+    line-height: 30px;
+}
+
+.navLink {
+    width: 100%;
+    margin: 0 60px;
+}
+
+#links {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#foot {
+    margin-top: 20px;
 }
