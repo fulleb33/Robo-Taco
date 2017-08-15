@@ -2,6 +2,24 @@ var db = require("../models");
 
 module.exports = function(app) {
 
+	app.get("/", function(req, res) {
+		db.RoboTaco.findAll({}).then(function(results) {
+			var hbsObject = {
+				tacos: results
+			};
+			res.render("index", hbsObject);
+		});
+	});
+
+	app.get("/Build-Your-Own", function(req, res) {
+		db.RoboTaco.findAll({}).then(function(results) {
+			var hbsObject = {
+				tacos: results
+			};
+			res.render("Build-Your-Own", hbsObject);
+		});
+	});
+
 	app.get("/api/tacos", function(req, res) {
 		db.RoboTaco.findAll({}).then(function(results) {
 			res.json(results);
@@ -15,6 +33,15 @@ module.exports = function(app) {
 			}
 		}).then(function(results) {
 			res.json(results);
+		});
+	});
+
+	app.post("Build-Your-Own", function(req, res) {
+		db.RoboTaco.findAll({}).then(function(results) {
+			var hbsObject = {
+				tacos: results
+			};
+			res.render("Build-Your-Own", hbsObject);
 		});
 	});
 

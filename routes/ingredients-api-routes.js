@@ -1,4 +1,5 @@
 var db = require("../models");
+var Builder = require("../assets/app/taco-builder-logic.js");
 
 module.exports = function(app) {
 
@@ -11,8 +12,23 @@ module.exports = function(app) {
 		});
 	});
 
+	app.get("/Build-Your-Own", function(req, res) {
+		db.ingredients.find({}).then(function(results) {
+			var hbsObject = {
+				ingredients: results
+			}
+			res.render("Build-Your-Own", hbsObject);
+		});
+	});
+
+	app.get("/api/ingredients", function(req, res) {
+		db.ingredients.findAll({}).then(function(results) {
+			res.json(results);
+		});
+	});
+
 	app.get("/api/ingredients/:id", function(req, res) {
-		db.Ingredients.findOne({
+		db.ingredients.findOne({
 			where: {
 				id: req.params.id
 			}
@@ -22,7 +38,7 @@ module.exports = function(app) {
 	});
 
 	app.post("/api/ingredients", function(req, res) {
-		db.Ingredients.create(
+		db.ingredients.create(
 		  {
 			item_name: req.body.item_name,
 			type: req.body.type,
@@ -34,7 +50,7 @@ module.exports = function(app) {
 	});
 
 	app.delete("/api/ingredients/:id", function(req, res) {
-		db.Ingredients.destroy({
+		db.ingredients.destroy({
 			where: {
 				id: req.params.id
 			}
@@ -44,7 +60,7 @@ module.exports = function(app) {
 	});
 
 	app.put("/api/ingredients", function(req, res) {
-		db.Ingredients.update(
+		db.ingredients.update(
 		  {
 		  	item_name: req.body.name,
 		  	type: req.body.type,
