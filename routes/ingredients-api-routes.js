@@ -13,7 +13,7 @@ module.exports = function(app) {
 	});
 
 	app.get("/Build-Your-Own", function(req, res) {
-		db.ingredients.find({}).then(function(results) {
+		db.ingredients.findAll({}).then(function(results) {
 			var hbsObject = {
 				ingredients: results
 			}

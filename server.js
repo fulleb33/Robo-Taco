@@ -3,6 +3,7 @@ var sequelize = require("sequelize");
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
+var handlebars = require('handlebars');
 
 var app = express();
 
@@ -22,13 +23,16 @@ var exphbs = require('express-handlebars');
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// app.listen(PORT, function() {
-//     console.log("app listening on PORT " + PORT);
-// });
-
 require("./routes/ingredients-api-routes.js")(app);
 
 require("./routes/taco-api-routes.js")(app);
+
+ handlebars.registerHelper('if_eq', function(a, b, opts) {
+     if(a == b)
+         return opts.fn(this);
+     else
+         return opts.inverse(this);
+});
 
 db.sequelize.sync().then(function() {
 	app.listen(PORT, function() {

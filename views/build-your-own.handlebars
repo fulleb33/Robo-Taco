@@ -1,0 +1,41 @@
+<h1>Build a Taco</h1>
+<script type="text/javascript">
+
+//  Handlebars.registerHelper('if_eq', function(a, b, opts) {
+//      if(a == b)
+//          return opts.fn(this);
+//      else
+//          return opts.inverse(this);
+// });
+</script>
+
+{{#each ingredients}}
+
+
+{{#if_eq this.type 'vegtables'}}
+	<p>hey</p>
+{{/if_eq}}
+	
+
+{{/each}}
+
+
+
+<form id="tortillas"></form>
+
+<form id="grains"></form>
+
+<form id="legumes"></form>
+
+<form id="proteins"></form>
+
+<form id="vegtables"></form>
+
+<form id="dairy"></form>
+
+<form id="salsas"></form>
+
+<form id="sides"></form>
+
+<form id="beverages"></form>
+
