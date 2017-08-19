@@ -27,7 +27,7 @@ require("./routes/ingredients-api-routes.js")(app);
 
 require("./routes/taco-api-routes.js")(app);
 
- handlebars.registerHelper('if_eq', function(a, b, opts) {
+handlebars.registerHelper('if_eq', function(a, b, opts) {
      if(a == b)
          return opts.fn(this);
      else

@@ -1,41 +1,223 @@
-<h1>Build a Taco</h1>
-<script type="text/javascript">
+<div class="parallax2" id="title" style="min-height: 500px;">
 
-//  Handlebars.registerHelper('if_eq', function(a, b, opts) {
-//      if(a == b)
-//          return opts.fn(this);
-//      else
-//          return opts.inverse(this);
-// });
-</script>
+    <h4 id='homeTitle'>Build-a-Taco!</h4>
 
-{{#each ingredients}}
+</div>
+
+<script type="text/javascript"></script>
+
+<div id="BYOwrap">
+    <br>
+    <br>
+    <div>
+        <div id="inline">        
+            <p id="itemName">Tortillas</p>
+            <p id="price">Price</p>
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'tortilla'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        {{/if_eq}} {{/each}}
+    </div>
 
 
-{{#if_eq this.type 'vegtables'}}
-	<p>hey</p>
-{{/if_eq}}
-	
 
-{{/each}}
+    <div>
+        <br>
+        <div id="inline">            
+                <p id="itemName">Grains</p>                        
+                <p id="price">Price</p>            
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'grain'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        
+        {{/if_eq}} {{/each}}
+    </div>
 
 
 
-<form id="tortillas"></form>
+    <div>
+        <br>
+        <div id="inline">           
+                <p id="itemName">Legumes</p>                      
+                <p id="price">Price</p>            
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'legume'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        {{/if_eq}} {{/each}}
+    </div>
 
-<form id="grains"></form>
 
-<form id="legumes"></form>
 
-<form id="proteins"></form>
+    <div>
+        <br>
+        <div id="inline">           
+                <p id="itemName">Protein</p>                      
+                <p id="price" >Price</p>          
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'protein'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        {{/if_eq}} {{/each}}
+    </div>
 
-<form id="vegtables"></form>
 
-<form id="dairy"></form>
 
-<form id="salsas"></form>
+    <div>
+        <br>
+        <div id="inline">            
+                <p id="itemName">Vegetables</p>                      
+                <p id="price">Price</p>            
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'vegtables'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        {{/if_eq}} {{/each}}
+    </div>
 
-<form id="sides"></form>
 
-<form id="beverages"></form>
 
+    <div>
+        <br>
+        <div id="inline">            
+                <p id="itemName">Dairy</p>                      
+                <p id="price">Price</p>           
+        </div>
+        {{#each ingredients}} {{#if_eq this.type 'dairy'}}
+        <div class="row" id="checks">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                    <input value={{this.price}} readonly>
+                </div>
+            </div>
+        </div>
+        {{/if_eq}} {{/each}}
+    </div>
+
+
+
+    <div>
+        <br>
+        <div id="inline">           
+                <p id="itemName">Salsas</p>
+                <p id="price">Price</p>            
+        </div>
+                {{#each ingredients}} {{#if_eq this.type 'salsa'}}
+                <div class="row" id="checks">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                            <input value={{this.price}} readonly>
+                        </div>
+                    </div>
+                </div>
+                {{/if_eq}} {{/each}}
+    </div>
+            
+
+
+
+
+            <div>
+            <br>
+                <div id="inline">                    
+                        <p id="itemName">Sides</p>                    
+                        <p id="price">Price</p>                    
+                </div>
+                {{#each ingredients}} {{#if_eq this.type 'sides'}}
+                <div class="row" id="checks">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                            <input value={{this.price}} readonly>
+                        </div>
+                    </div>
+                </div>
+                {{/if_eq}} {{/each}}
+            </div>
+
+
+
+            <div>
+                <br>
+                <div id="inline">                    
+                        <p id="itemName">Beverages</p>                  
+                        <p id="price">Price</p>                   
+                </div>
+                {{#each ingredients}} {{#if_eq this.type 'beverage'}}
+                <div class="row" id="checks">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+        <input type="checkbox" aria-label="Checkbox for following text input">
+      </span>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" value={{this.item_name}} readonly>
+                            <input value={{this.price}} readonly>
+                        </div>
+                    </div>
+                </div>
+                {{/if_eq}} {{/each}}
+            </div>
+            <br>
+            <div id="centerButton">
+            <input id="submitButton" type="submit">
+            </div>
+            <br><br>
+            </div>
