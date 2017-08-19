@@ -1,14 +1,22 @@
-.test{
-/*    background: url(../images/tacos3.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;*/
+body {
+    background-color: #222222;
 }
 
 .parallax { 
     /* The image used */
     background-image: url(../images/tacos3.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url(../images/tacos4.jpg);
     /* Set a specific height */
     height: 100%; 
     /* Create the parallax scrolling effect */
@@ -44,7 +52,7 @@ h3 {
 
 #communityTitle{
 	background-image: url(../images/farm.jpg);
-	color:white;
+	color: white;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -57,7 +65,7 @@ h3 {
 
 #promoTitle{
     background-image: url(../images/tacopeople.jpg);
-        color:white;
+    color:white;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -91,4 +99,36 @@ p {
 
 #foot {
     margin-top: 20px;
+}
+
+#checks {
+    margin-left: 25px;
+}
+
+#itemName {
+    margin-left: 42px;
+    float: left;
+}
+
+#price {
+    margin-left: 300px;
+}
+
+#inline {
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+#BYOwrap {
+    width: 100%;
+    padding-left: 397px;
+}
+
+#submitButton {
+    width: 40%;
+}
+
+#centerButton {
+    padding-left: 85px;
 }
