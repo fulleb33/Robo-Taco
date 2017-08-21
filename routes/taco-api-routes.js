@@ -45,6 +45,14 @@ module.exports = function(app) {
         });
     });
 
+   app.post("review", function(req, res) {
+    db.RoboTaco.findAll({}).then(function(results) {
+        var hbsObject = {
+
+        }
+    })
+   })
+
    app.post("/api/tacos", function(req, res) {
         db.RoboTaco.create({
             taco_name: req.body.taco_name,
