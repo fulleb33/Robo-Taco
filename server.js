@@ -34,6 +34,13 @@ handlebars.registerHelper('if_eq', function(a, b, opts) {
          return opts.inverse(this);
 });
 
+handlebars.registerHelper('if_ls', function(a, b, opts) {
+    if(a < b)
+        return opts.fn(this);
+    else
+        return opts.inverse(this);
+});
+
 db.sequelize.sync().then(function() {
 	app.listen(PORT, function() {
 		console.log("listening on PORT " + PORT);
