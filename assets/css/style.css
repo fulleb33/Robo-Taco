@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-.parallax2 { 
+.parallaxBYO { 
     /* The image used */
     background-image: url(../images/tacos4.jpg);
     /* Set a specific height */
