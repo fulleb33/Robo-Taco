@@ -1,0 +1,162 @@
+body {
+    background-color: #222222;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url(../images/tacos3.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url(../images/tacos4.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title{
+	height: 100%;
+}
+
+#homeTitle{
+    font-family: 'Impact';
+    letter-spacing: 10px;
+	font-size: 150px;
+	color: white;
+	text-align: center;
+    padding: 15% 2%;
+    opacity: .8;
+}
+
+h3 {
+    font-family: 'Impact';
+    letter-spacing: 7px;
+    font-size: 60px;
+    opacity: .8;
+    color: white;
+    text-align: center;
+    padding: 25px 20px 25px 20px;
+}
+
+#communityTitle{
+	background-image: url(../images/farm.jpg);
+	color: white;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	text-align: center;
+	height: 500px;
+	padding-top: 1px;
+}
+
+#promoTitle{
+    background-image: url(../images/tacopeople.jpg);
+    color:white;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 500px;
+    padding-top: 20px;
+}
+
+.a {
+    padding: 10px;
+    margin: 10% 20%;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'arial';
+    line-height: 30px;
+}
+
+.navLink {
+    width: 100%;
+    margin: 0 60px;
+}
+
+#links {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#foot {
+    margin-top: 20px;
+}
+
+#checks {
+    margin-left: 25px;
+}
+
+#itemName {
+    margin-left: 42px;
+    float: left;
+}
+
+#price {
+    margin-left: 300px;
+}
+
+#inline {
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+#BYOwrap {
+    width: 100%;
+    padding-left: 397px;
+}
+
+#submitButton {
+    width: 40%;
+}
+
+#centerButton {
+    padding-left: 85px;
+}
+
+#name, #email, #message, #subject{
+    float:left;
+    color:white;
+}
+
+#messageBox{
+    height: 200px;
+}
+
+#submitBtn{
+    display: block;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+div#contactPara{
+    background-color: #222222;
+    height: 800px;
+}
+        
+.aboutUs{
+    color:white;
+}
+
+#who{
+    margin-top: 30px;
+}
