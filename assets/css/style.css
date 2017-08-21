@@ -160,3 +160,12 @@ div#contactPara{
 #who{
     margin-top: 30px;
 }
+
+#reviewname, #feedback {
+    margin-left: 31%
+}
+
+#reviewnameBox{
+    width: 500px;
+    margin: auto;
+}
