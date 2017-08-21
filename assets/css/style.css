@@ -26,16 +26,52 @@ body {
     background-size: cover;
 }
 
+.parallaxCU { 
+    /* The image used */
+    background-image: url(../images/tacos5.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxMENU { 
+    /* The image used */
+    background-image: url(../images/tacosHD.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxLOCATIONS { 
+    /* The image used */
+    background-image: url(../images/skylineHD3.jpg);
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #title{
-	height: 100%;
+    height: 100%;
 }
 
 #homeTitle{
     font-family: 'Impact';
     letter-spacing: 10px;
-	font-size: 150px;
-	color: white;
-	text-align: center;
+    font-size: 150px;
+    color: white;
+    text-align: center;
     padding: 15% 2%;
     opacity: .8;
 }
@@ -51,16 +87,16 @@ h3 {
 }
 
 #communityTitle{
-	background-image: url(../images/farm.jpg);
-	color: white;
+    background-image: url(../images/farm.jpg);
+    color: white;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	text-align: center;
-	height: 500px;
-	padding-top: 1px;
+    text-align: center;
+    height: 500px;
+    padding-top: 1px;
 }
 
 #promoTitle{
@@ -79,6 +115,7 @@ h3 {
 .a {
     padding: 10px;
     margin: 10% 20%;
+    text-align: center;
 }
 
 p {
@@ -131,4 +168,54 @@ p {
 
 #centerButton {
     padding-left: 85px;
+}
+
+#name, #email, #message, #subject{
+    float:left;
+    color:white;
+}
+
+#messageBox{
+    height: 200px;
+}
+
+#submitBtn{
+    display: block;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+div#contactPara{
+    background-color: #222222;
+    height: 800px;
+}
+        
+.aboutUs{
+    color:white;
+}
+
+#who{
+    margin-top: 30px;
+}
+
+.profilePics {
+    height: 270px;
+    width: 200px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+#profiles{
+    background-image: url(../images/whirlpool.jpg);
+    color:white;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 220px;
+    padding-top: 20px;
 }

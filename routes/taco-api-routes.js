@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-    app.get("/", function(req, res) {
+   app.get("/", function(req, res) {
         db.RoboTaco.findAll({}).then(function(results) {
             var hbsObject = {
                 tacos: results
@@ -11,7 +11,7 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/Build-Your-Own", function(req, res) {
+   app.get("/Build-Your-Own", function(req, res) {
         db.RoboTaco.findAll({}).then(function(results) {
             var hbsObject = {
                 tacos: results
@@ -20,13 +20,13 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/api/tacos", function(req, res) {
+   app.get("/api/tacos", function(req, res) {
         db.RoboTaco.findAll({}).then(function(results) {
             res.json(results);
         });
     });
 
-    app.get("/api/tacos/:id", function(req, res) {
+   app.get("/api/tacos/:id", function(req, res) {
         db.RoboTaco.findOne({
             where: {
                 id: req.params.id
@@ -36,7 +36,7 @@ module.exports = function(app) {
         });
     });
 
-    app.post("Build-Your-Own", function(req, res) {
+   app.post("Build-Your-Own", function(req, res) {
         db.RoboTaco.findAll({}).then(function(results) {
             var hbsObject = {
                 tacos: results
@@ -45,7 +45,7 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/tacos", function(req, res) {
+   app.post("/api/tacos", function(req, res) {
         db.RoboTaco.create({
             taco_name: req.body.taco_name,
             ingredients: req.body.ingredients,
@@ -55,7 +55,7 @@ module.exports = function(app) {
         });
     });
 
-    app.delete("/api/tacos/:id", function(req, res) {
+   app.delete("/api/tacos/:id", function(req, res) {
         db.RoboTaco.destroy({
             where: {
                 id: req.params.id
@@ -65,7 +65,7 @@ module.exports = function(app) {
         });
     });
 
-    app.put("/api/tacos", function(req, res) {
+   app.put("/api/tacos", function(req, res) {
         db.RoboTaco.update({
             taco_name: req.body.taco_name,
             ingredients: req.body.ingredients,
@@ -79,20 +79,14 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/contact", function(req, res) {
-        res.render("contact");
-    });
-
-    app.get("/locations", function(req, res) {
-        res.render("locations");
-    });
-
-    app.get("/menu", function(req, res) {
+   app.get("/menu", function(req, res) {
         db.RoboTaco.findAll({}).then(function(results) {
             var hbsObject = {
-                robotaco: results
+                robotacos: results
             };
             res.render("menu", hbsObject);
+        }).catch(function(err){
+            console.log(err)
         });
     });
 
