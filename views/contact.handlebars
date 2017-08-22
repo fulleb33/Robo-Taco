@@ -1,3 +1,5 @@
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+
 <div class="parallaxCU" id="title" style="min-height: 500px;">
 
     <h1 id='homeTitle'>Contact Us!</h1>
@@ -45,7 +47,14 @@
 </div>
 
 <script type="text/javascript">
-	
+
+$('#submitBtn').click(function(event) {
+	event.preventDefault();
+	$.post('/email/' + $('#nameBox').val().trim() + '/' + $('#emailBox').val() + '/' + $('#subjectBox').val() + '/' + $('#messageBox').val(), function() {
+	});
+});
+
+
 </script>
 
 <div id="reviews"></div>
