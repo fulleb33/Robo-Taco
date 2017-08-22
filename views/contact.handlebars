@@ -50,6 +50,7 @@
 
 $('#submitBtn').click(function(event) {
 	event.preventDefault();
+	alert('Email has been sent! Thank you!');
 	$.post('/email/' + $('#nameBox').val().trim() + '/' + $('#emailBox').val() + '/' + $('#subjectBox').val() + '/' + $('#messageBox').val(), function() {
 	});
 });
