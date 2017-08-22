@@ -46,3 +46,36 @@ db.sequelize.sync().then(function() {
 		console.log("listening on PORT " + PORT);
 	});
 });
+
+function sendMail(email, message) {
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.MAILER_USER,
+            pass: process.env.MAILER_PWD
+        }
+    });
+
+    // setup email data with unicode symbols
+    let mailOptions = {
+        from: '"BYT" <eatbeforeyouspeak@gmail.com>', // sender address
+        to: '<colindavidmcdonnell@gmail.com', // list of receivers
+        subject: 'Your thoughts when hungry', // Subject line
+        text: message, // plain text body
+        html: message // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        //console.log('Message %s sent: %s', info.messageId, info.response);
+    });
+}
+
+dbReference.on('value', function(snapshot) {
+    sendMail(snapshot.val().email, snapshot.val().message);
+});

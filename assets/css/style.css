@@ -166,6 +166,10 @@ p {
     width: 40%;
 }
 
+button#revSubmitBtn {
+    margin-left: 575px;
+}
+
 #centerButton {
     padding-left: 85px;
 }
@@ -207,11 +211,37 @@ div#contactPara{
     border-color: white;
 }
 
-#reviewname, #feedback {
-    margin-left: 31%
+#reviewname {
+    margin-left: 31%;
+}
+
+#feedback {
+    margin-left: 28%;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+}
+
+#feedbackBox {
+    margin: auto;
+    width: 498px;
+    height: 42px; 
 }
 
 #reviewnameBox{
     width: 500px;
     margin: auto;
+}
+
+.sigIng {
+    margin: auto;
+    color: white;
+    text-align: center;
+    width: 40%;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
 }
