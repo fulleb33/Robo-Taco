@@ -9,7 +9,7 @@ body {
     width: 100%; 
     height: 80px;
     z-index: 9999;
-    opacity: .82;
+    opacity: .87;
 }
 
 .parallax { 
@@ -212,13 +212,18 @@ div#contactPara{
     margin-top: 30px;
 }
 
+.about {
+    font-size: 13px;
+}
+
 .profilePics {
-    height: 270px;
-    width: 200px;
+    height: 275px;
+    width: 220px;
     border: solid;
     border-width: 2px;
     border-radius: 5px;
     border-color: white;
+    margin: 13px 0;
 }
 
 #reviewname {

@@ -16,7 +16,7 @@ module.exports = function(app) {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"EMAIL" <eatbeforeyouspeak@gmail.com>', // sender address
+        from: req.params.email + ' <eatbeforeyouspeak@gmail.com>', // sender address
         to: 'colindavidmcdonnell@gmail.com', // list of receivers
         subject: req.params.subject, // Subject line
         text: req.params.message // plain text body

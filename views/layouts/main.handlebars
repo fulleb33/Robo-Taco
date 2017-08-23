@@ -18,32 +18,30 @@
 </head>
 
 <body>
-
-    <div class="pos-f-t" id="fade">
-        <div id="navbarToggleExternalContent">
-            <div class="bg-dark p-4" id="links">
-                <a href="/" class="navLink"><span class="text-muted">About</span></a>
-                <a href="/contact" class="navLink"><span class="text-muted">Contact</span></a>
-                <a href="/locations" class="navLink"><span class="text-muted">Locations</span></a>
-                <a href="/menu" class="navLink"><span class="text-muted">Menu</span></a>
-                <a href="/Build-Your-Own" class="navLink"><span class="text-muted">Build-Your-Own</span></a>
+<header>
+        <div class="pos-f-t" id="fade">
+            <div id="navbarToggleExternalContent">
+                <div class="bg-dark p-4" id="links">
+                    <a href="/" class="navLink"><span class="text-muted">About</span></a>
+                    <a href="/contact" class="navLink"><span class="text-muted">Contact</span></a>
+                    <a href="/locations" class="navLink"><span class="text-muted">Locations</span></a>
+                    <a href="/menu" class="navLink"><span class="text-muted">Menu</span></a>
+                    <a href="/Build-Your-Own" class="navLink"><span class="text-muted">Build-Your-Own</span></a>
+                </div>
             </div>
         </div>
-    </div>
-   
+</header>
 
 <script type="text/javascript">
-(function($) {          
-    $(document).ready(function(){                    
-        $(window).scroll(function(){                          
-            if ($(this).scrollTop() > 200) {
-                $('#fade').fadeIn(10);
-            } else {
-                $('#fade').fadeOut(10);
-            }
-        });
-    });
-});
+    window.addEventListener("scroll", function() {
+    if (window.scrollY > 200) {
+        $('#fade').fadeOut(800);
+    }
+    else {
+        $('#fade').fadeIn(800);
+    }
+},false);
+
 </script>
 
     {{{ body }}}
