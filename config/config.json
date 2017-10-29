@@ -1,5 +1,6 @@
 {
   "development": {
+    "use_env_variable": "JAWSDB_URL",
     "username": "root",
     "password": "551533Id",
     "database": "ingredients_db",
@@ -7,6 +8,7 @@
     "dialect": "mysql"
   },
   "test": {
+    "use_env_variable": "JAWSDB_URL",
     "username": "root",
     "password": "",
     "database": "ingredients_db",
@@ -16,9 +18,6 @@
  
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql",
-    "username": "aht2mqizvfspwmvb",
-    "password": "lw0fl58bay4gnasx",
-    "host": "uc13jynhmkss3nve.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"
+    "dialect": "mysql"
   }
 }
